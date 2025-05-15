@@ -6,7 +6,7 @@ var result = document.getElementById("result");
 var spinBtn = document.getElementById("spinBtn");
 var spinning = false;
 
-// Sounds
+
 var spinSound = new Audio("spin.mp3");
 var winSound = new Audio("win.mp3");
 
@@ -20,7 +20,7 @@ function spin() {
   spinBtn.disabled = true;
   result.innerText = "";
 
-  // Play spin sound
+ 
   spinSound.currentTime = 0;
   spinSound.play();
 
@@ -35,12 +35,12 @@ function spin() {
     slot3.innerText = getRandomSymbol();
   }, 100);
 
-  // Stop after 1.5s
+
   setTimeout(function () {
     clearInterval(interval);
 
-    // Easy win mode for demo
-    let isWin = Math.random() < 0.3;
+    
+    let isWin = Math.random() < 0.4;
     let final1, final2, final3;
 
     if (isWin) {
